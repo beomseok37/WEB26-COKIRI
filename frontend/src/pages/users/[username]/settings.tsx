@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Header from 'src/components/Header';
 import UserSettingsCard from 'src/components/cards/UserSettingsCard';
 import ExternalAuthCard from 'src/components/cards/ExternalAuthCard';
+import PermissionDeniedNotify from 'src/components/notify/PermissionDeniedNotify';
 import { Col } from 'src/components/Grid';
 
 import { SETTING_DESCRIPTION } from 'src/globals/descriptions';
@@ -36,7 +37,7 @@ function Settings() {
               <ExternalAuthCard />
             </>
           ) : (
-            <p>퍼미션 디나이드permission denied</p>
+            <PermissionDeniedNotify />
           )}
         </Col>
       </Page.Main>
